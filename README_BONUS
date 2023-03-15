@@ -1,0 +1,19 @@
+------------------------------ TEMA2 APD BONUS ---------------------------
+--------------------- PIRVU STEFANIA-DANIELA - 332CC ---------------------
+
+
+Pentru rezolvarea bonusului am procedat astfel:
+
+Din clasa principala, Tema2.java, am verificat dimensiunea fisierului
+"orders" . Am impartit aceasta dimensiune la numarul maxim de threaduri 
+si am obtinut astfel numarul de bytes pe care trebuie sa il citeasca 
+fiecare thread (l-am numit "max"). Am creeat mai multe threaduri "MyThread".
+Fiecare thread deschide fisierul de intrare. In cazul primului thread,
+acesta citeste "max" bytes, iar daca nu se afla la capat de linie, citeste 
+inca cativa bytes pana ajunge la capatul de linie.
+In cazul celui de al 2-lea, acesta face skip peste primii "max" bytes, vede 
+daca se afla la inceput de linie, daca nu, citeste pana la inceput de linie.
+Acum threadul 2 poate citii si el "max" bytes si citeste pana ajunge la capat de linie.
+La fel procedez pentru toate celelalte threaduri.
+In cazul threadurilor de nivel 2, numite "Workers" procedez in mod identic.
+
